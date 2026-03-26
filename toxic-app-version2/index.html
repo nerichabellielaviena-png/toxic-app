@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Emisiones Tóxicas</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight.b050d634.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.b050d634.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="modulepreload" href="./_observablehq/client.a523260a.js">
+<link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.ba831d4f.js">
+<link rel="modulepreload" href="./_npm/leaflet@1.9.4/721623d8.js">
+<link rel="modulepreload" href="./_npm/arquero@8.0.3/d718e9b0.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.1e0cb1b0.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/7c43807f.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/acorn@8.16.0/16003489.js">
+<link rel="modulepreload" href="./_npm/@uwdata/flechette@2.3.0/950612cd.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/e324157d.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/5ced1d52.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.2/3785bf2d.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/720b7f0a.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/02d43215.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/aa00730b.js">
+<link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
+<script type="module">
+
+import {define} from "./_observablehq/client.a523260a.js";
+import {registerFile} from "./_observablehq/stdlib.ba831d4f.js";
+
+registerFile("./data/2024_pr (3).csv", {"name":"./data/2024_pr (3).csv","mimeType":"text/csv","path":"./_file/data/2024_pr (3).20962579.csv","lastModified":1773165878747,"size":245827});
+
+define({id: "2ae703d0", outputs: ["L"], body: async () => {
+const L = await import("./_npm/leaflet@1.9.4/721623d8.js");
+
+return {L};
+}});
+
+define({id: "fdbf923f", outputs: ["aq"], body: async () => {
+const aq = await import("./_npm/arquero@8.0.3/d718e9b0.js");
+
+return {aq};
+}});
+
+define({id: "749ab0a3", inputs: ["FileAttachment","aq"], outputs: ["dataCruda"], body: async (FileAttachment,aq) => {
+const dataCruda = await FileAttachment("./data/2024_pr (3).csv")
+    .text()
+    .then(aq.fromCSV)
+return {dataCruda};
+}});
+
+define({id: "9fa71617", outputs: ["selectData"], body: () => {
+function selectData(data) {
+  return data
+    .select(
+      "1. YEAR",
+      "4. FACILITY NAME",
+      "6. CITY",
+      "12. LATITUDE",
+      "13. LONGITUDE",
+      "23. INDUSTRY SECTOR",
+      "37. CHEMICAL"
+    )
+    .rename({
+      "1. YEAR": "YEAR",
+      "4. FACILITY NAME": "FACILITY",
+      "6. CITY": "CITY",
+      "12. LATITUDE": "LATITUDE",
+      "13. LONGITUDE": "LONGITUDE",
+      "23. INDUSTRY SECTOR": "INDUSTRY",
+      "37. CHEMICAL": "CHEMICAL"
+    });
+}
+return {selectData};
+}});
+
+define({id: "be853f11", inputs: ["aq","Plot"], outputs: ["plotHistogram"], body: (aq,Plot) => {
+function plotHistogram(data, variable, cantidad) {
+  const dataAgrupada = data
+    .groupby(variable)
+    .count()
+    .orderby(aq.desc("count"))
+    .reify()
+    .slice(0, cantidad);
+
+  const maxCount = Math.max(...dataAgrupada.objects().map((d) => d.count));
+
+  return Plot.plot({
+    height: 400,
+    marginLeft: 100,
+    marginRight: 10,
+    width: 700,
+    style: {
+      padding: 20,
+      backgroundColor: "#faf0e6"
+    },
+    x: {
+      grid: true,
+      label: "FRECUENCIAS",
+      labelAnchor: "center",
+      labelArrow: "none",
+      domain: [0, maxCount * 1.2]
+    },
+    y: {
+      grid: true,
+      label: "MUNICIPIO"
+    },
+    title: "Distribución de Emisiones por Municipios",
+    color: {
+      type: "categorical",
+      scheme: "tableau10"
+    },
+
+    marks: [
+      Plot.frame({ stroke: "black", strokeWidth: -2 }),
+      Plot.barX(dataAgrupada.objects(), {
+        x: "count",
+        y: variable,
+        fill: variable,
+        sort: { y: "-x" }
+      })
+    ]
+  });
+}
+return {plotHistogram};
+}});
+
+define({id: "3494b6d8", inputs: ["aq","Plot"], outputs: ["plotHistogram1"], body: (aq,Plot) => {
+function plotHistogram1(data, variable, cantidad) {
+  const dataAgrupada = data
+    .groupby(variable)
+    .count()
+    .orderby(aq.desc("count"))
+    .reify()
+    .slice(0, cantidad);
+
+  const maxCount = Math.max(...dataAgrupada.objects().map((d) => d.count));
+
+  return Plot.plot({
+    height: 400,
+    marginLeft: 170,
+    marginRight: 10,
+    width: 700,
+    style: {
+      padding: 20,
+      backgroundColor: "#faf0e6"
+    },
+    x: {
+      grid: true,
+      label: "FRECUENCIAS",
+      labelAnchor: "center",
+      labelArrow: "none",
+      domain: [0, maxCount * 1.2]
+    },
+    y: {
+      grid: true,
+      label: "SECTOR INDUSTRIAL"
+    },
+    title: "Distribución de Emisiones por Sector Industrial",
+    color: {
+      type: "categorical",
+      scheme: "tableau10"
+    },
+
+    marks: [
+      Plot.frame({ stroke: "black", strokeWidth: -2 }),
+      Plot.barX(dataAgrupada.objects(), {
+        x: "count",
+        y: variable,
+        fill: variable,
+        sort: { y: "-x" }
+      })
+    ]
+  });
+}
+return {plotHistogram1};
+}});
+
+define({id: "65b97365", inputs: ["selectData","dataCruda"], outputs: ["data"], body: (selectData,dataCruda) => {
+const data = selectData(dataCruda)
+return {data};
+}});
+
+define({id: "ec5683ec", inputs: ["view","Inputs"], outputs: ["cantidad"], body: (view,Inputs) => {
+const cantidad = view(Inputs.range([5,20],{value:10,step:1, label:"Cantidad"}))
+return {cantidad};
+}});
+
+define({id: "d123cc6c", inputs: ["view","Inputs"], outputs: ["zoomMapa"], body: (view,Inputs) => {
+const zoomMapa = view(Inputs.range([7, 18], { value: 9, step: 0.1, label: "Zoom del Mapa" }));
+return {zoomMapa};
+}});
+
+define({id: "d7a52df8", inputs: ["display","html","plotHistogram","data","cantidad","plotHistogram1"], body: (display,html,plotHistogram,data,cantidad,plotHistogram1) => {
+display(html`<div style="display: flex; gap: 50px; width: 110%; height: 460px;">
+  ${plotHistogram(data,"CITY",cantidad)}
+  ${plotHistogram1(data,"INDUSTRY",cantidad)}
+</div>`);
+}});
+
+define({id: "f77e475e", outputs: ["colorMap"], body: () => {
+    const colorMap = {
+      Chemicals: "red",
+      "Petroleum Bulk Terminals": "blue",
+      "Electric Utilities": "green",
+      "Electrical Equipment": "yellow",
+      Food: "purple",
+      "Miscellaneous Manufacturing": "orange",
+      "Fabricated Metals": "pink",
+      Petroleum: "brown",
+      "Chemical Wholesalers": "gray",
+      Beverages: "cyan",
+      Machinery: "magenta",
+      "Wood Products": "lime",
+      "Primary Metals": "indigo",
+      "Transportation Equipment": "teal",
+      Paper: "violet",
+      Other: "turquoise",
+      "Hazardous Waste": "maroon",
+      Tobacco: "olive",
+      "Plastics and Rubber": "silver",
+      "Computers and Electronic Products": "gold"
+    };
+return {colorMap};
+}});
+
+define({id: "99a64dd4", inputs: ["html","colorMap","L","data","display","zoomMapa"], outputs: ["renderMapWithLegend"], body: (html,colorMap,L,data,display,zoomMapa) => {
+function renderMapWithLegend(z) {
+  // Contenedor principal
+  const container = html`<div style="display: flex; gap: 15px; font-family: sans-serif; align-items: flex-start;"></div>`;
+  
+  // Div para el mapa
+  const mapDiv = html`<div style="flex-grow: 1; height: 550px; border-radius: 8px; border: 1px solid #ccc;"></div>`;
+  
+  // Div para la leyenda (Scroll si hay muchos elementos)
+  const legendDiv = html`
+    <div style="min-width: 220px; max-height: 550px; overflow-y: auto; padding: 10px; background: #f9f9f9; border-radius: 8px; font-size: 12px; border: 1px solid #ddd;">
+      <h4 style="margin: 0 0 10px 0;">Sectores Industriales</h4>
+      ${Object.entries(colorMap).map(([sector, color]) => html`
+        <div style="display: flex; align-items: center; margin-bottom: 4px;">
+          <div style="width: 12px; height: 12px; background-color: ${color}; border-radius: 50%; margin-right: 8px; border: 1px solid #555;"></div>
+          <span>${sector}</span>
+        </div>
+      `)}
+    </div>
+  `;
+
+  container.append(mapDiv, legendDiv);
+
+  // Lógica de Leaflet
+  Promise.resolve().then(() => {
+    const map = L.map(mapDiv).setView([18.2208, -66.5901], z);
+
+    const token = 'pk.eyJ1IjoibWVjb2JpIiwiYSI6IjU4YzVlOGQ2YjEzYjE3NTcxOTExZTI2OWY3Y2Y1ZGYxIn0.LUg7xQhGH2uf3zA57szCyw';
+    const linkMapa = 'https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v12/tiles/512/{z}/{x}/{y}@2x?access_token=';
+    
+    L.tileLayer(linkMapa + token, {
+      attribution: '© Mapbox © OpenStreetMap',
+      tileSize: 512,
+      zoomOffset: -1
+    }).addTo(map);
+
+
+    if (!data || !data._data) {
+      mapDiv.appendChild(html`<p style="color: red;">Error: No hay datos disponibles</p>`);
+      return mapDiv;
+    }
+
+    const latitudes = data._data.LATITUDE || [];
+    const longitudes = data._data.LONGITUDE || [];
+    const years = data._data.YEAR || [];
+    const facilities = data._data.FACILITY || [];
+    const cities = data._data.CITY || [];
+    const industries = data._data.INDUSTRY || [];
+    const chemicals = data._data.CHEMICAL || [];
+
+    const coords = latitudes.map((lat, i) => [lat, longitudes[i]]).filter(coord => 
+      coord[0] && coord[1] && !isNaN(coord[0]) && !isNaN(coord[1])
+    );
+
+    coords.forEach((coord, i) => {
+      const idx = latitudes.indexOf(coord[0]);
+      if (idx === -1) return;
+      
+      const industry = industries[idx] || "Other";
+      const color = colorMap[industry] || "turquoise";
+
+      const marker = L.circleMarker(coord, {
+        color: color,
+        radius: 8,
+        opacity: 1,
+        fillOpacity: 0.8,
+        weight: 2
+      }).addTo(map);
+
+    marker.bindPopup(`
+  <div style="font-family: Arial; min-width: 250px;">
+    <strong>Año:</strong> ${years[i]}<br/>
+    <strong>Municipio:</strong> ${cities[i]}<br/>
+    <strong>Nombre de la Facilidad:</strong> ${facilities[i]}<br/>
+    <strong>Sector Industrial:</strong> ${industry}<br/>
+    <strong>Químico:</strong> ${chemicals[i]}
+  </div>
+`);
+    });
+
+  });
+
+return container;
+}
+
+display(renderMapWithLegend(zoomMapa));
+return {renderMapWithLegend};
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
+<nav>
+</nav>
+</aside>
+<main id="observablehq-main" class="observablehq">
+<h1 id="emisiones-toxicas" tabindex="-1"><a class="observablehq-header-anchor" href="#emisiones-toxicas">Emisiones Tóxicas</a></h1>
+<div class="observablehq observablehq--block"><!--:2ae703d0:--></div>
+<div class="observablehq observablehq--block"><!--:fdbf923f:--></div>
+<div class="observablehq observablehq--block"><!--:749ab0a3:--></div>
+<div class="observablehq observablehq--block"><!--:9fa71617:--></div>
+<div class="observablehq observablehq--block"><!--:be853f11:--></div>
+<div class="observablehq observablehq--block"><!--:3494b6d8:--></div>
+<div class="observablehq observablehq--block"><!--:65b97365:--></div>
+<div class="observablehq observablehq--block"><!--:ec5683ec:--></div>
+<div class="observablehq observablehq--block"><!--:d123cc6c:--></div>
+<div class="observablehq observablehq--block"><!--:d7a52df8:--></div>
+<div class="observablehq observablehq--block"><!--:f77e475e:--></div>
+<div class="observablehq observablehq--block"><!--:99a64dd4:--></div>
+</main>
+<footer id="observablehq-footer">
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2026-03-18T11:24:20">Mar 18, 2026</a>.</div>
+</footer>
+</div>
+</body>
+</html>
