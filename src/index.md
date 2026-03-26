@@ -1,6 +1,6 @@
 ```js
 display(html`<h1 style="color: #fff; font-size: 28px; margin-bottom: 10px;">
-  Emisiones Tóxicas en Puerto Rico 1987-2023 bla bla
+  Emisiones Tóxicas en Puerto Rico 1987-2023
 </h1>`);
 ```
 ```js
